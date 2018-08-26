@@ -14,7 +14,8 @@ import javax.persistence.*;
  * Time: 15.21
  * To change this template use File | Settings | File Templates.
  */
-@Table(name = "users_log", catalog = "test")
+//@Table(name = "users_log", catalog = "one_to_many")
+@Table(name = "users_log")
 @Entity
 @Data
 @NoArgsConstructor

@@ -16,7 +16,8 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "users", catalog = "test")
+//@Table(name = "users", catalog = "one_to_many")
+@Table(name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
