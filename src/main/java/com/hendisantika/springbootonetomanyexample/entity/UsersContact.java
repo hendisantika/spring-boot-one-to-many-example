@@ -3,7 +3,6 @@ package com.hendisantika.springbootonetomanyexample.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,29 +11,27 @@ import java.util.List;
  * Email: hendisantika@gmail.com
  * Telegram : @hendisantika34
  * Date: 26/08/18
- * Time: 15.21
+ * Time: 15.23
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-@Table(name = "users", catalog = "test")
+@Table(name = "users_contact", catalog = "test")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Getter
 @Setter
-public class Users {
+public class UsersContact {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
-    private Integer salary;
-    private String teamName;
+    private Integer phoneNo;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
-    private List<UsersLog> usersLogs;
+    private Users users;
 }

@@ -1,5 +1,7 @@
 package com.hendisantika.springbootonetomanyexample.entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 /**
@@ -14,6 +16,12 @@ import javax.persistence.*;
  */
 @Table(name = "users_log", catalog = "test")
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Getter
+@Setter
 public class UsersLog {
 
     @Id
@@ -25,31 +33,4 @@ public class UsersLog {
 
     @Column(name = "user_id")
     private Integer userId;
-
-    public UsersLog() {
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getLog() {
-        return log;
-    }
-
-    public void setLog(String log) {
-        this.log = log;
-    }
 }
